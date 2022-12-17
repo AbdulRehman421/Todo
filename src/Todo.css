@@ -1,0 +1,93 @@
+.todo {
+    min-height: 95vh;
+    width: 50%;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.todo__title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.todo__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.todo__input {
+    width: 90%;
+    border: 1px solid black;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+}
+
+.todo__input>input {
+    outline: none;
+    width: 85%;
+    border: none;
+    margin-left: 1rem;
+
+}
+
+.todo__input>span {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: rgb(90, 90, 255);
+    border-radius: 50%;
+    padding: 3px;
+    height: 2rem;
+    width: 2rem;
+}
+
+.todo__input>span>svg {
+    color: white;
+    font-size: 2rem;
+}
+
+.task {
+
+    border: 0.5px solid black;
+    width: 90%;
+    height: 3rem;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+
+}
+
+.task>div>svg {
+    width: 5rem;
+}
+
+.task__icon {
+
+    color: rgb(5, 149, 252);
+
+}
+
+.task__title {
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .todo {
+        width: 90%;
+    }
+}
