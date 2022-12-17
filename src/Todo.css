@@ -90,4 +90,8 @@
     .todo {
         width: 90%;
     }
+
+    html {
+        font-size: 80%;
+    }
 }
