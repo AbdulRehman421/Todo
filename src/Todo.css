@@ -93,6 +93,10 @@
     }
 
     html {
-        font-size: 80%;
+        font-size: 90%;
+    }
+
+    .task {
+        font-size: 16px;
     }
 }
