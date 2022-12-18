@@ -2,7 +2,7 @@ import React from "react";
 import "./Todo.css";
 import AddIcon from "@mui/icons-material/Add";
 import CachedIcon from "@mui/icons-material/Cached";
-import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+import DeleteIcon from '@mui/icons-material/Delete';
 import { useState } from "react";
 
 const Todo = () => {
@@ -12,7 +12,7 @@ const Todo = () => {
         setTask(e.target.value);
     };
     const addTask = () => {
-        if (!task) {
+        if (task === "") {
         } else {
             setTaskCollection((prev) => [...prev, task]);
             setTask("");
@@ -27,6 +27,7 @@ const Todo = () => {
 
         setTaskCollection(remainingTasks);
     };
+
 
     return (
         <div className="todo">
@@ -43,7 +44,7 @@ const Todo = () => {
                                     onClick={() => handleComplete(index)}
                                     className="task__icon"
                                 >
-                                    <AssignmentTurnedInIcon />
+                                    <DeleteIcon />
                                 </div>
                             </div>
                         ))}
