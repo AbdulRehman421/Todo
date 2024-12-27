@@ -28,7 +28,6 @@ const Todo = () => {
         setTaskCollection(remainingTasks);
     };
 
-
     return (
         <div className="todo">
             <div>

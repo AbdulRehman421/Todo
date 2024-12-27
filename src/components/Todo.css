@@ -1,28 +1,35 @@
 .todo {
     min-height: 95vh;
     width: 50%;
-    background-color: white;
+    background-color: #f9f9f9;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .todo__title {
     font-size: 2rem;
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .todo__body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .todo__input {
     width: 90%;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     height: 3rem;
     display: flex;
     align-items: center;
@@ -30,56 +37,71 @@
     margin-right: auto;
     margin-bottom: 1rem;
     border-radius: 5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.todo__input>input {
+.todo__input > input {
     outline: none;
     width: 85%;
     border: none;
     margin-left: 1rem;
-
+    font-size: 1rem;
 }
 
-.todo__input>span {
+.todo__input > span {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    background-color: rgb(83, 163, 255);
+    background-color: #007bff;
     border-radius: 50%;
     padding: 3px;
     height: 2rem;
     width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.todo__input>span>svg {
+.todo__input > span:hover {
+    background-color: #0056b3;
+}
+
+.todo__input > span > svg {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .task {
-
-    border: 0.5px solid black;
+    border: 0.5px solid #ccc;
     width: 90%;
     height: 3rem;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
+    font-size: 1rem;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 10px;
-
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
-.task>div>svg {
-    width: 5rem;
+.task:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task > div > svg {
+    width: 2rem;
 }
 
 .task__icon {
-
-    color: rgb(255, 0, 0);
-
+    color: #ff0000;
+    cursor: pointer;
 }
 
 .task__title {
@@ -90,8 +112,6 @@
     .todo {
         width: 90%;
         min-height: 90vh;
-
-
     }
 
     html {
@@ -99,6 +119,6 @@
     }
 
     .task {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
